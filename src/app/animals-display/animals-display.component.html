@@ -19,7 +19,7 @@ $(window).load(function() {
         <div class="thumbnail">
           <div class="date">
             <div class="day">{{currentAnimal.dateAdded.getDate()}}</div>
-            <div class="month">{{currentAnimal.dateAdded.getMonth()}}</div>
+            <div class="month">{{assignMonthName(currentAnimal.dateAdded.getMonth())}}</div>
           </div><img src={{currentAnimal.profilePicURL}}/>
         </div>
         <!-- Post Content-->
