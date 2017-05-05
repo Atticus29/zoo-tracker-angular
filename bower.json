@@ -1,0 +1,21 @@
+{
+  "name": "animal-tracker",
+  "description": "A webapp to track animals at a zoo",
+  "main": "",
+  "authors": [
+    "Mark Fisher"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/Atticus29/zoo-tracker-angular.git",
+  "private": true,
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "Ink": "^3.1.10"
+  }
+}
