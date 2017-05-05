@@ -19,6 +19,11 @@ export class FilterPipe implements PipeTransform {
         return animal.age>2;
       });
       return output;
+    } else if(by === 'species'){
+      output = input.filter(animal=>{
+        return animal.species===identity;
+      });
+      return output;
     } else{
       return input;
     }

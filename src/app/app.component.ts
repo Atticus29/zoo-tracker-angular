@@ -38,8 +38,9 @@ export class AppComponent {
     this.endDisplayNewForm();
   }
 
-  applyFilter(filterString: string){
-    this.filterString = filterString;
+  applyFilter(filterStringInput: string, indentityStringInput: string){
+    this.filterString = filterStringInput;
+    this.identityString = indentityStringInput;
   }
 
   getUniqueSpecies(animals: Animal[]){
@@ -49,7 +50,6 @@ export class AppComponent {
       flags[animals[i].species] = true;
       output.push(animals[i].species);
     }
-    console.log(output);
     return output;
   }
 
