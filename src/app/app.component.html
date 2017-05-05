@@ -10,8 +10,11 @@
                 <li><a href="#">Diet</a></li>
             </ul>
         </li>
-        <li class="heading"><a href="#">Add New Animal <span class="fa fa-plus"></span> </a></li>
+        <li class="heading"><a (click)="displayNewForm()">Add New Animal <span class="fa fa-plus"></span> </a></li>
     </ul>
 </nav>
 
-<app-animals-display [childAnimalList]="masterAnimalArray"></app-animals-display>
+<app-animals-display [childAnimalList]="masterAnimalArray" *ngIf="displayAniamls"></app-animals-display>
+<app-edit-animal></app-edit-animal>
+
+<app-add-animal *ngIf="displayNew" (newAnimalSender)="addAnimal($event)"></app-add-animal>

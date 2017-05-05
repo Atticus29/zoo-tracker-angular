@@ -18,5 +18,21 @@ export class AppComponent {
     new Animal("Hyaena hyaena","Striped Hyena", "Heckle", 6, "Carnivore", "Savanna", 3, "Female", "Bones", "Jessica", "https://s-media-cache-ak0.pinimg.com/originals/df/3e/99/df3e9958df149a135ec1c94496f395f2.jpg"),
     new Animal("Panthera leo", "Lion","Sage", 9, "Carnivore", "Savanna", 2, "Male", "A wide selection of toys", "Too much sunlight", "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/photoark-lion.png.adapt.945.1.jpg"),
     new Animal("Pteropus vampyrus", "Flying Fox","Geoffrey", 4, "Frugivore", "Artic Zone", 2, "Male", "Long naps", "Overripe fruit", "https://upload.wikimedia.org/wikipedia/commons/0/0c/Pteropus_vampyrus_headshot.jpeg"),
-  ]
+  ];
+
+  public displayNew: boolean = false;
+  public displayAniamls: boolean = true;
+
+  displayNewForm(){
+    this.displayNew = true;
+    this.displayAniamls = false;
+  }
+  endDisplayNewForm(){
+    this.displayNew = false;
+    this.displayAniamls = true;
+  }
+  addAnimal(animal: Animal){
+    this.masterAnimalArray.push(animal);
+    this.endDisplayNewForm();
+  }
 }
