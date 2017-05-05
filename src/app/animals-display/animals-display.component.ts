@@ -13,12 +13,13 @@ export class AnimalsDisplayComponent {
 
 
 
-assignMonthName(number: number){
-  var monthNames: string[] = ["January", "February", "March", "April", "May", "June",
-  "July", "August", "September", "October", "November", "December"
+  assignMonthName(number: number){
+    var monthNames: string[] = ["January", "February", "March", "April", "May", "June",
+    "July", "August", "September", "October", "November", "December"
   ];
   return monthNames[number];
 }
+
 
 constructor() { }
 

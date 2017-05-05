@@ -41,4 +41,16 @@ export class AppComponent {
   applyFilter(filterString: string){
     this.filterString = filterString;
   }
+
+  getUniqueSpecies(animals: Animal[]){
+    var flags = [], output = [], l = animals.length, i;
+    for( i=0; i<l; i++) {
+      if( flags[animals[i].species]) continue;
+      flags[animals[i].species] = true;
+      output.push(animals[i].species);
+    }
+    console.log(output);
+    return output;
+  }
+
 }

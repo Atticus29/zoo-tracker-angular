@@ -3,7 +3,7 @@
     <li class="heading active"><a href="#">Home</a></li>
     <li>
       <a href="#">Filter Options</a>
-      <ul class="submenu">
+      <ul class="submenu dropdown">
         <li>
           <a (click)="applyFilter('')">All</a>
         </li>
@@ -13,10 +13,19 @@
         <li>
           <a (click)="applyFilter('mature')">Mature</a>
         </li>
-        <li>Species
-          <ul class="submenu" *ngFor="let currentAnimal of masterAnimalArray">
-            <li>{{currentAnimal.species}}</li>
-          </ul>
+        <li class="submenu">
+          <a href="#">Species</a>
+          <!-- <div class="ink-navigation"> -->
+            <ul class="dropdown">
+              <div *ngFor="let currentSpecies of getUniqueSpecies(masterAnimalArray)">
+                <li>
+                  <a href="#">
+                    {{currentSpecies}}
+                  </a>
+                </li>
+              </div>
+            </ul>
+          <!-- </div> -->
         </li>
         <li><a href="#">Diet</a></li>
       </ul>
