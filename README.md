@@ -86,7 +86,7 @@ THE SOFTWARE.
 ### Components
 
 - [ ] **add-animal**: I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.
-- [ ] **animals-display**:I want to view a list of animals I have logged.
+- [x] **animals-display**:I want to view a list of animals I have logged.
 - [ ] **edit-animal**:I want to click an animal to edit its name, age or caretakers.
 
 

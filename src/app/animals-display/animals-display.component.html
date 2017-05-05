@@ -1,0 +1,46 @@
+<script type="text/javascript">
+$(window).load(function() {
+  $('.post-module').hover(function() {
+    $(this).find('.description').stop().animate({
+      height: "toggle",
+      opacity: "toggle"
+    }, 300);
+  });
+});
+</script>
+<div class="container">
+  <div id="loop-container" *ngFor="let currentAnimal of childAnimalList">
+
+    <div class="column">
+      <div class="demo-title">{{currentAnimal.name}}</div>
+      <!-- Post-->
+      <div class="post-module">
+        <!-- Thumbnail-->
+        <div class="thumbnail">
+          <div class="date">
+            <div class="day">{{currentAnimal.dateAdded.getDate()}}</div>
+            <div class="month">{{currentAnimal.dateAdded.getMonth()}}</div>
+          </div><img src={{currentAnimal.profilePicURL}}/>
+        </div>
+        <!-- Post Content-->
+        <div class="post-content">
+          <!-- <div class="category">Photos</div> -->
+          <h1 class="title">{{currentAnimal.species}}</h1>
+          <h2 class="sub_title">{{currentAnimal.commonName}}</h2>
+          <p class="description">Likes: {{currentAnimal.likes}}</p>
+          <p class="description">Dislike: {{currentAnimal.dislikes}}</p>
+          <div class="post-meta">
+            <span class="timestamp">Age:  {{currentAnimal.age}}</span>
+            <span class="timestamp">
+              <i class="fa fa-transgender"></i>
+              <a href="#"> {{currentAnimal.sex}}</a>
+            </span>
+            <span class="timestamp">
+              <a class="fa fa-edit" href="#"></a>
+            </span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
