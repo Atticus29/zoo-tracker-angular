@@ -9,7 +9,7 @@ $(window).load(function() {
 });
 </script>
 <div class="container">
-  <div id="loop-container" *ngFor="let currentAnimal of childAnimalList">
+  <div id="loop-container" *ngFor="let currentAnimal of childAnimalList| filter: childFilterString:childIdentityString">
 
     <div class="column">
       <div class="demo-title">{{currentAnimal.name}}</div>

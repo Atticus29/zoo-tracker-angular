@@ -17,11 +17,13 @@ export class AppComponent {
     new Animal("Bubo scandiacus", "Snowy Owl","Screech", 4, "Carnivore", "Artic Zone", 2, "Male", "Moths", "Traffic noises","https://files.allaboutbirds.net/wp-content/uploads/2015/04/SnowyOwl-Kube-FI.jpg"),
     new Animal("Hyaena hyaena","Striped Hyena", "Heckle", 6, "Carnivore", "Savanna", 3, "Female", "Bones", "Jessica", "https://s-media-cache-ak0.pinimg.com/originals/df/3e/99/df3e9958df149a135ec1c94496f395f2.jpg"),
     new Animal("Panthera leo", "Lion","Sage", 9, "Carnivore", "Savanna", 2, "Male", "A wide selection of toys", "Too much sunlight", "http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/photoark-lion.png.adapt.945.1.jpg"),
-    new Animal("Pteropus vampyrus", "Flying Fox","Geoffrey", 4, "Frugivore", "Artic Zone", 2, "Male", "Long naps", "Overripe fruit", "https://upload.wikimedia.org/wikipedia/commons/0/0c/Pteropus_vampyrus_headshot.jpeg"),
+    new Animal("Pteropus vampyrus", "Flying Fox","Geoffrey", 1, "Frugivore", "Artic Zone", 2, "Male", "Long naps", "Overripe fruit", "https://upload.wikimedia.org/wikipedia/commons/0/0c/Pteropus_vampyrus_headshot.jpeg"),
   ];
 
   public displayNew: boolean = false;
   public displayAniamls: boolean = true;
+  public filterString: string = null;
+  public identityString: string = null;
 
   displayNewForm(){
     this.displayNew = true;
@@ -34,5 +36,9 @@ export class AppComponent {
   addAnimal(animal: Animal){
     this.masterAnimalArray.push(animal);
     this.endDisplayNewForm();
+  }
+
+  applyFilter(filterString: string){
+    this.filterString = filterString;
   }
 }

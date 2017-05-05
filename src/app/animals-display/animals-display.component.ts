@@ -8,6 +8,8 @@ import { Animal } from '../animal.model';
 })
 export class AnimalsDisplayComponent {
   @Input() childAnimalList: Animal[];
+  @Input() childFilterString: string;
+  @Input() childIdentityString: string;
 
 
 
@@ -15,7 +17,6 @@ assignMonthName(number: number){
   var monthNames: string[] = ["January", "February", "March", "April", "May", "June",
   "July", "August", "September", "October", "November", "December"
   ];
-  console.log("got here");
   return monthNames[number];
 }
 

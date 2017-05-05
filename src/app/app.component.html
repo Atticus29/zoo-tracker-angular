@@ -1,20 +1,31 @@
 <nav class="ink-navigation">
-    <ul class="menu horizontal black">
-        <li class="heading active"><a href="#">Home</a></li>
+  <ul class="menu horizontal black">
+    <li class="heading active"><a href="#">Home</a></li>
+    <li>
+      <a href="#">Filter Options</a>
+      <ul class="submenu">
         <li>
-            <a href="#">Filter Options</a>
-            <ul class="submenu">
-                <li><a href="#">Young</a></li>
-                <li><a href="#">Mature</a></li>
-                <li><a href="#">Species</a></li>
-                <li><a href="#">Diet</a></li>
-            </ul>
+          <a (click)="applyFilter('')">All</a>
         </li>
-        <li class="heading"><a (click)="displayNewForm()">Add New Animal <span class="fa fa-plus"></span> </a></li>
-    </ul>
+        <li>
+          <a (click)="applyFilter('young')">Young</a>
+        </li>
+        <li>
+          <a (click)="applyFilter('mature')">Mature</a>
+        </li>
+        <li>Species
+          <ul class="submenu" *ngFor="let currentAnimal of masterAnimalArray">
+            <li>{{currentAnimal.species}}</li>
+          </ul>
+        </li>
+        <li><a href="#">Diet</a></li>
+      </ul>
+    </li>
+    <li class="heading"><a (click)="displayNewForm()">Add New Animal <span class="fa fa-plus"></span> </a></li>
+  </ul>
 </nav>
 
-<app-animals-display [childAnimalList]="masterAnimalArray" *ngIf="displayAniamls"></app-animals-display>
+<app-animals-display [childAnimalList]="masterAnimalArray" *ngIf="displayAniamls" [childFilterString]="filterString" [childIdentityString]="identityString"></app-animals-display>
 <app-edit-animal></app-edit-animal>
 
 <app-add-animal *ngIf="displayNew" (newAnimalSender)="addAnimal($event)"></app-add-animal>
