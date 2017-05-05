@@ -113,14 +113,15 @@ THE SOFTWARE.
 - [ ] Extend the functionality of the app by building out the animal model to further enhance the app.
 - [ ] Add custom SASS styling with corresponding Gulp tasks to compile.
 - [ ] Display of the total number of caretakers needed in a day.
-- [ ] Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.
-- [ ] Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
+- [x] Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.
+- [x] Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
 - [ ] Add a new master component to average the total age for each species.
 - [ ] Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
 - [ ] *deploy on firebase*
 - [ ] *set up database in firebase*
 - [ ] *optimize accessibility*
 - [ ] *DRY up*
+- [ ] *Form validation for new animals*
 
 ---
 

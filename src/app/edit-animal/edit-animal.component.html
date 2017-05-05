@@ -54,18 +54,25 @@
       <div class="control">
         <input type="number" name="caretaker" id="caretaker" required step="1" [(ngModel)]="editAnimal.caretakerCount">
       </div>
+      <div class="control">
+        <fieldset>
+        <legend>Sex</legend>
+        <div class="control-group">
+            <p class="label">Please select one of these options</p>
+            <ul class="control unstyled">
+                <li><<input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male"><label for="rb1">Male</label></li>
+                <li><input type="radio" id="rb2" name="rb" value="Queen of Diamonds"><label for="rb2">Queen of Diamonds</label></li>
+                <li><input type="radio" id="rb3" name="rb" value="Queen of Spades"><label for="rb3">Queen of Spades</label></li>
+                <li><input type="radio" id="rb4" name="rb" value="Jack of Hearts"><label for="rb4">Jack of Hearts</label></li>
+                <li><input type="radio" id="rb5" name="rb" value="King of Clubs"><label for="rb5">King of Clubs</label></li>
+            </ul>
+        </div>
+    </fieldset>
       <label for="sex">Sex</label><br>
-      <!-- <ul class="control unstyled"> -->
-        <!-- <li> -->
-          <input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male"> Male <span class="fa fa-male"></span><br>
-        <!-- </li> -->
-        <!-- <li> -->
-          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Female">Female <span class="fa fa-female"></span><br>
-        <!-- </li> -->
-        <!-- <li> -->
-          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable">Not Applicable <span class="fa fa-genderless"></span><br>
-        <!-- </li> -->
-      <!-- </ul> -->
+          <input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male"><br> Male <span class="fa fa-male"></span><br>
+          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Female"><br>Female <span class="fa fa-female"></span><br>
+          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable"><br>Not Applicable <span class="fa fa-genderless"></span><br>
+      </div>
       <label for="likes">Likes</label>
       <div class="control">
         <input type="text" name="likes" id="likes" [(ngModel)]="editAnimal.likes">
@@ -76,7 +83,7 @@
       </div>
       <label for="profile-url">Profile Picture URL</label>
       <div class="control">
-        <input type="number" name="profile-url" id="profile-url" required step="1" [(ngModel)]="editAnimal.profilePicURL">
+        <input type="text" name="profile-url" id="profile-url" required step="1" [(ngModel)]="editAnimal.profilePicURL">
       </div>
       <br>
       <button type="submit" name="button" class="ink-button blue" (click)="finishUpdate()"> <span class="fa fa-check">

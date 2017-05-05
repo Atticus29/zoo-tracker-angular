@@ -35,13 +35,13 @@ $(window).load(function() {
               <i [class]="assignSexIcon(currentAnimal.sex)"></i>
               <a href="#"> {{currentAnimal.sex[0]}}</a>
             </span>
-            <span class="timestamp">
-              <a class="fa fa-edit" (click)=editInDisplayComponent(currentAnimal)></a>
-            </span>
+
             <span class="timestamp">
               <i [class]="assignDietIcon(currentAnimal.diet)"></i>
               <a href="#"> {{currentAnimal.diet[0]}}</a>
-              <!-- <a href="#"> {{currentAnimal.sex}}</a> -->
+            </span>
+            <span class="timestamp">
+              <a class="fa fa-edit" (click)=editInDisplayComponent(currentAnimal)></a>
             </span>
           </div>
         </div>

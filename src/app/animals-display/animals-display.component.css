@@ -188,3 +188,7 @@ body {
 .title{
   font-style: italic;
 }
+
+.month{
+  margin-top: -4px;
+}
