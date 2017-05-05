@@ -15,7 +15,6 @@
         </li>
         <li class="submenu">
           <a href="#">Species</a>
-          <!-- <div class="ink-navigation"> -->
             <ul class="dropdown">
               <div *ngFor="let currentSpecies of getUniqueSpecies(masterAnimalArray)">
                 <li>
@@ -25,9 +24,19 @@
                 </li>
               </div>
             </ul>
-          <!-- </div> -->
         </li>
-        <li><a href="#">Diet</a></li>
+        <li class="submenu">
+          <a href="#">Diet</a>
+            <ul class="dropdown">
+              <div *ngFor="let currentDiets of getUniqueDiets(masterAnimalArray)">
+                <li>
+                  <a (click)="applyFilter('diet', currentDiets)">
+                    {{currentDiets}}
+                  </a>
+                </li>
+              </div>
+            </ul>
+        </li>
       </ul>
     </li>
     <li class="heading"><a (click)="displayNewForm()">Add New Animal <span class="fa fa-plus"></span> </a></li>

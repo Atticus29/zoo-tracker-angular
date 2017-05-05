@@ -22,75 +22,89 @@
       <br>
       <label for="diet">Diet</label>
       <select #diet>
-        <option name="diet" [value]="Herbivore">
-           <p>Herbivore
-             <span class="fa fa-leaf"></span>
-           </p>
-         </option>
-        <option name="diet" [value]="Carnivore">
+        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Herbivore">
+          <p>Herbivore
+            <span class="fa fa-leaf"></span>
+          </p>
+        </option>
+        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Carnivore">
           <p>Carnivore
             <span class="fa fa-cutlery"></span>
           </p>
         </option>
-        <option name="diet" [value]="Insectivore">
+        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Omnivore">
+          <p>Omnivore
+            <span class="fa fa-cutlery"></span>
+          </p>
+        </option>
+        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Insectivore">
           <p>Insectivore
             <span class="fa fa-bug"></span>
           </p>
         </option>
-        <option name="diet"
-         [value]="Frugivore">
-         <p>Frugivore
-           <span class="fa fa-apple"></span>
-         </p>
-       </option>
-      </select>
-      <br>
-      <br>
-      <label for="location">Location</label>
-      <div class="control">
-        <input type="text" name="location" id="location" [(ngModel)]="editAnimal.location">
-      </div>
-      <label for="caretaker">Caretakers Required</label>
-      <div class="control">
-        <input type="number" name="caretaker" id="caretaker" required step="1" [(ngModel)]="editAnimal.caretakerCount">
-      </div>
-      <div class="control">
-        <fieldset>
+        <option name="diet" [(ngModel)]="editAnimal.diet"
+        [value]="Frugivore">
+        <p>Frugivore
+          <span class="fa fa-apple"></span>
+        </p>
+      </option>
+    </select>
+    <br>
+    <br>
+    <label for="location">Location</label>
+    <div class="control">
+      <input type="text" name="location" id="location" [(ngModel)]="editAnimal.location">
+    </div>
+    <label for="caretaker">Caretakers Required</label>
+    <div class="control">
+      <input type="number" name="caretaker" id="caretaker" required step="1" [(ngModel)]="editAnimal.caretakerCount">
+    </div>
+    <div class="control">
+      <fieldset>
         <legend>Sex</legend>
         <div class="control-group">
-            <p class="label">Please select one of these options</p>
-            <ul class="control unstyled">
-                <li><<input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male"><label for="rb1">Male</label></li>
-                <li><input type="radio" id="rb2" name="rb" value="Queen of Diamonds"><label for="rb2">Queen of Diamonds</label></li>
-                <li><input type="radio" id="rb3" name="rb" value="Queen of Spades"><label for="rb3">Queen of Spades</label></li>
-                <li><input type="radio" id="rb4" name="rb" value="Jack of Hearts"><label for="rb4">Jack of Hearts</label></li>
-                <li><input type="radio" id="rb5" name="rb" value="King of Clubs"><label for="rb5">King of Clubs</label></li>
-            </ul>
+          <p class="label">Please select one of these options</p>
+          <ul class="unstyled">
+            <li>
+              <input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male">
+              <label for="sex1">Male
+                <span class="fa fa-male"></span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Female">
+              <label for="sex2">Female
+                <span class="fa fa-female"></span>
+              </label>
+            </li>
+            <li>
+              <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable">
+              <label for="sex3">Other/Not Applicable
+                <span class="fa fa-transgender"></span>
+              </label>
+            </li>
+          </ul>
         </div>
-    </fieldset>
-      <label for="sex">Sex</label><br>
-          <input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male"><br> Male <span class="fa fa-male"></span><br>
-          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Female"><br>Female <span class="fa fa-female"></span><br>
-          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable"><br>Not Applicable <span class="fa fa-genderless"></span><br>
-      </div>
-      <label for="likes">Likes</label>
-      <div class="control">
-        <input type="text" name="likes" id="likes" [(ngModel)]="editAnimal.likes">
-      </div>
-      <label for="dislikes">Dislikes</label>
-      <div class="control">
-        <input type="text" name="dislikes" id="dislikes"  [(ngModel)]="editAnimal.dislikes">
-      </div>
-      <label for="profile-url">Profile Picture URL</label>
-      <div class="control">
-        <input type="text" name="profile-url" id="profile-url" required step="1" [(ngModel)]="editAnimal.profilePicURL">
-      </div>
-      <br>
-      <button type="submit" name="button" class="ink-button blue" (click)="finishUpdate()"> <span class="fa fa-check">
-      </span>
-       Done Editing</button>
+      </fieldset>
     </div>
-    <div class="all-33">
+    <label for="likes">Likes</label>
+    <div class="control">
+      <input type="text" name="likes" id="likes" [(ngModel)]="editAnimal.likes">
     </div>
+    <label for="dislikes">Dislikes</label>
+    <div class="control">
+      <input type="text" name="dislikes" id="dislikes"  [(ngModel)]="editAnimal.dislikes">
+    </div>
+    <label for="profile-url">Profile Picture URL</label>
+    <div class="control">
+      <input type="text" name="profile-url" id="profile-url" required step="1" [(ngModel)]="editAnimal.profilePicURL">
+    </div>
+    <br>
+    <button type="button" name="button" class="ink-button blue" (click)="finishUpdate(editAnimal)"> <span class="fa fa-check">
+    </span>
+    Done Editing</button>
   </div>
+  <div class="all-33">
+  </div>
+</div>
 </form>

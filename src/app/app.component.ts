@@ -59,6 +59,16 @@ export class AppComponent {
     return output;
   }
 
+  getUniqueDiets(animals: Animal[]){
+    var flags = [], output = [], l = animals.length, i;
+    for( i=0; i<l; i++) {
+      if( flags[animals[i].diet]) continue;
+      flags[animals[i].diet] = true;
+      output.push(animals[i].diet);
+    }
+    return output;
+  }
+
   editAnimal(animal: Animal){
     this.displayAniamls = false;
     this.displayEdit = true;

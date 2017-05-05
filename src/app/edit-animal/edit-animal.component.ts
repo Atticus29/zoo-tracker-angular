@@ -11,8 +11,10 @@ export class EditAnimalComponent {
   @Output() editAnimalSender = new EventEmitter();
   constructor() { }
 
-  finishUpdate(){
-    console.log("got here");
+  finishUpdate(editAnimal: Animal){
+    console.log(editAnimal);
+    // console.log(editAnimal.sex);
+    // console.log(editAnimal.diet);
     this.editAnimalSender.emit();
   }
 

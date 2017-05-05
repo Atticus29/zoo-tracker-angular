@@ -24,7 +24,13 @@ export class FilterPipe implements PipeTransform {
         return animal.species===identity;
       });
       return output;
-    } else{
+    } else if(by === 'diet'){
+      output = input.filter(animal=>{
+        return animal.diet===identity;
+      });
+      return output;
+    }
+    else{
       return input;
     }
   }
