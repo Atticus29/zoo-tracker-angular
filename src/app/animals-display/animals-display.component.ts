@@ -1,4 +1,4 @@
-import { Component, Input, Output } from '@angular/core';
+import { Component, Input, Output, EventEmitter } from '@angular/core';
 import { Animal } from '../animal.model';
 
 @Component({
@@ -10,6 +10,7 @@ export class AnimalsDisplayComponent {
   @Input() childAnimalList: Animal[];
   @Input() childFilterString: string;
   @Input() childIdentityString: string;
+  @Output() editAnimalSender = new EventEmitter();
 
 
 
@@ -18,6 +19,10 @@ export class AnimalsDisplayComponent {
     "July", "August", "September", "October", "November", "December"
   ];
   return monthNames[number];
+}
+
+editInDisplayComponent(animal: Animal){
+  this.editAnimalSender.emit(animal);
 }
 
 

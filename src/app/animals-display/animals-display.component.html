@@ -36,7 +36,7 @@ $(window).load(function() {
               <a href="#"> {{currentAnimal.sex}}</a>
             </span>
             <span class="timestamp">
-              <a class="fa fa-edit" href="#"></a>
+              <a class="fa fa-edit" (click)=editInDisplayComponent(currentAnimal)></a>
             </span>
           </div>
         </div>

@@ -22,12 +22,14 @@ export class AppComponent {
 
   public displayNew: boolean = false;
   public displayAniamls: boolean = true;
+  public displayEdit: boolean = false;
   public filterString: string = null;
   public identityString: string = null;
 
   displayNewForm(){
-    this.displayNew = true;
+    this.displayEdit = false;
     this.displayAniamls = false;
+    this.displayNew = true;
   }
   endDisplayNewForm(){
     this.displayNew = false;
@@ -39,6 +41,9 @@ export class AppComponent {
   }
 
   applyFilter(filterStringInput: string, indentityStringInput: string){
+    this.displayAniamls = true;
+    this.displayEdit = false;
+    this.displayNew = false;
     this.filterString = filterStringInput;
     this.identityString = indentityStringInput;
   }
@@ -51,6 +56,11 @@ export class AppComponent {
       output.push(animals[i].species);
     }
     return output;
+  }
+
+  editAnimal(animal: Animal){
+    this.displayAniamls = false;
+    this.displayEdit = true;
   }
 
 }
