@@ -32,11 +32,16 @@ $(window).load(function() {
           <div class="post-meta">
             <span class="timestamp">Age:  {{currentAnimal.age}}</span>
             <span class="timestamp">
-              <i class="fa fa-transgender"></i>
-              <a href="#"> {{currentAnimal.sex}}</a>
+              <i [class]="assignSexIcon(currentAnimal.sex)"></i>
+              <a href="#"> {{currentAnimal.sex[0]}}</a>
             </span>
             <span class="timestamp">
               <a class="fa fa-edit" (click)=editInDisplayComponent(currentAnimal)></a>
+            </span>
+            <span class="timestamp">
+              <i [class]="assignDietIcon(currentAnimal.diet)"></i>
+              <a href="#"> {{currentAnimal.diet[0]}}</a>
+              <!-- <a href="#"> {{currentAnimal.sex}}</a> -->
             </span>
           </div>
         </div>

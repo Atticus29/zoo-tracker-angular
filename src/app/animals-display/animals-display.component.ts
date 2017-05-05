@@ -25,6 +25,33 @@ editInDisplayComponent(animal: Animal){
   this.editAnimalSender.emit(animal);
 }
 
+assignSexIcon(sex: string){
+  if(sex === "Male"){
+    return "fa fa-male";
+  } else if(sex === "Female"){
+    return "fa fa-female";
+  } else{
+    return "fa fa-transgender";
+  }
+}
+
+assignDietIcon(diet: string){
+  if(diet === "Herbivore"){
+    return "fa fa-leaf";
+  } else if(diet === "Carnivore"){
+    return "fa fa-cutlery";
+  } else if(diet === "Ominvore"){
+    return "fa fa-cutlery";
+  } else if(diet === "Insectivore"){
+    return "fa fa-bug";
+  }else if(diet === "Fugivore"){
+    return "fa fa-apple";
+  }
+  else{
+    return "fa fa-cutlery";
+  }
+}
+
 
 constructor() { }
 
