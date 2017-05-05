@@ -71,17 +71,17 @@ THE SOFTWARE.
 - [ ] Users (zoo staff), should be able to add newly-admitted animals to the app.
 
 ### Model(s)
-  - [ ] Model: animal
-      - [ ] Time signature added to the system
-      - [ ] Species (binomial nomenclature)
-      - [ ] Name (string)
-      - [ ] Age (number)
-      - [ ] Diet (limit to herbivore, carnivore, omnivore) -radio button (string)
-      - [ ] Location (string)
-      - [ ] Caretakers (number)
-      - [ ] Sex -radio button (string)
-      - [ ] Likes (string)
-      - [ ] Dislikes (string)
+  - [x] Model: animal
+      - [x] Time signature added to the system
+      - [x] Species (binomial nomenclature)
+      - [x] Name (string)
+      - [x] Age (number)
+      - [x] Diet (limit to herbivore, carnivore, omnivore) -radio button (string)
+      - [x] Location (string)
+      - [x] Caretakers (number)
+      - [x] Sex -radio button (string)
+      - [x] Likes (string)
+      - [x] Dislikes (string)
 
 ### Components
 
