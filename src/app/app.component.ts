@@ -25,6 +25,7 @@ export class AppComponent {
   public displayEdit: boolean = false;
   public filterString: string = null;
   public identityString: string = null;
+  public animalToBeEdited = null;
 
   displayNewForm(){
     this.displayEdit = false;
@@ -61,6 +62,13 @@ export class AppComponent {
   editAnimal(animal: Animal){
     this.displayAniamls = false;
     this.displayEdit = true;
+    this.animalToBeEdited = animal;
+  }
+
+  endEdit(){
+    this.displayAniamls = true;
+    this.displayEdit = false;
+    this.displayNew = false;
   }
 
 }

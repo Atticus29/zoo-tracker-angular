@@ -35,6 +35,6 @@
 </nav>
 
 <app-animals-display [childAnimalList]="masterAnimalArray" *ngIf="displayAniamls" [childFilterString]="filterString" [childIdentityString]="identityString" (editAnimalSender)="editAnimal($event)"></app-animals-display>
-<app-edit-animal *ngIf="displayEdit"></app-edit-animal>
+<app-edit-animal *ngIf="displayEdit" [editAnimal]="animalToBeEdited" (editAnimalSender)="endEdit()"></app-edit-animal>
 
 <app-add-animal *ngIf="displayNew" (newAnimalSender)="addAnimal($event)"></app-add-animal>

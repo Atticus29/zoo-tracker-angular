@@ -5,73 +5,83 @@
     <div class="control-group all-33 form-main">
       <label for="species">Species Name</label>
       <div class="control">
-        <input type="text" name="species" id="species" required placeholder="E.g., Panthera leo" #species>
+        <input type="text" [(ngModel)]="editAnimal.species" name="species">
       </div>
       <label for="common">Common Name</label>
       <div class="control">
-        <input type="text" name="common" id="common" required placeholder="E.g., Lion" #common>
+        <input type="text" name="common" id="common" required [(ngModel)]="editAnimal.commonName">
       </div>
       <label for="nickname">Nickname</label>
       <div class="control">
-        <input type="text" name="nickname" id="nickname" required placeholder="E.g., Simba" #nickname>
+        <input type="text" name="nickname" id="nickname" required [(ngModel)]="editAnimal.name">
       </div>
       <label for="age">Age</label>
       <div class="control">
-        <input type="number" name="age" id="age" required step="1" placeholder="E.g., 9" #age>
+        <input type="number" name="age" id="age" required step="1" [(ngModel)]="editAnimal.age" #age>
       </div>
       <br>
       <label for="diet">Diet</label>
       <select #diet>
         <option name="diet" [value]="Herbivore">
-           <p>Herbivore <span class="fa fa-leaf"></span></p>
+           <p>Herbivore
+             <span class="fa fa-leaf"></span>
+           </p>
          </option>
         <option name="diet" [value]="Carnivore">
-          <p>Carnivore <span class="fa fa-cutlery"></span></p>
+          <p>Carnivore
+            <span class="fa fa-cutlery"></span>
+          </p>
         </option>
         <option name="diet" [value]="Insectivore">
-          <p>Insectivore <span class="fa fa-bug"></span></p>
+          <p>Insectivore
+            <span class="fa fa-bug"></span>
+          </p>
         </option>
         <option name="diet"
          [value]="Frugivore">
-         <p>Frugivore <span class="fa fa-apple"></span></p>
+         <p>Frugivore
+           <span class="fa fa-apple"></span>
+         </p>
        </option>
       </select>
       <br>
       <br>
       <label for="location">Location</label>
       <div class="control">
-        <input type="text" name="location" id="location" placeholder="E.g., Savanna" #location>
+        <input type="text" name="location" id="location" [(ngModel)]="editAnimal.location">
       </div>
       <label for="caretaker">Caretakers Required</label>
       <div class="control">
-        <input type="number" name="caretaker" id="caretaker" required step="1" placeholder="E.g., 2" #caretaker>
+        <input type="number" name="caretaker" id="caretaker" required step="1" [(ngModel)]="editAnimal.caretakerCount">
       </div>
-      <label for="sex">Sex</label>
-      <ul class="control unstyled">
-        <li>
-          <input type="radio" name="sex" [value]="Male" #sex> Male <span class="fa fa-male"></span>
-        </li>
-        <li>
-          <input type="radio" name="sex" [value]="Female" #sex>Female <span class="fa fa-female"></span>
-        </li>
-        <li>
-          <input type="radio" name="sex" [value]="Not-Applicable" #sex>Not Applicable <span class="fa fa-genderless"></span>
-        </li>
-      </ul>
+      <label for="sex">Sex</label><br>
+      <!-- <ul class="control unstyled"> -->
+        <!-- <li> -->
+          <input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male"> Male <span class="fa fa-male"></span><br>
+        <!-- </li> -->
+        <!-- <li> -->
+          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Female">Female <span class="fa fa-female"></span><br>
+        <!-- </li> -->
+        <!-- <li> -->
+          <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable">Not Applicable <span class="fa fa-genderless"></span><br>
+        <!-- </li> -->
+      <!-- </ul> -->
       <label for="likes">Likes</label>
       <div class="control">
-        <input type="text" name="likes" id="likes" placeholder="E.g., a banana every night" #likes>
+        <input type="text" name="likes" id="likes" [(ngModel)]="editAnimal.likes">
       </div>
       <label for="dislikes">Dislikes</label>
       <div class="control">
-        <input type="text" name="dislikes" id="dislikes"  placeholder="E.g., terrified of slugs" #dislikes>
+        <input type="text" name="dislikes" id="dislikes"  [(ngModel)]="editAnimal.dislikes">
       </div>
       <label for="profile-url">Profile Picture URL</label>
       <div class="control">
-        <input type="number" name="profile-url" id="profile-url" required step="1" placeholder="E.g., http://kids.nationalgeographic.com/content/dam/kids/photos/animals/Mammals/H-P/photoark-lion.png.adapt.945.1.jpg" #profileURL>
+        <input type="number" name="profile-url" id="profile-url" required step="1" [(ngModel)]="editAnimal.profilePicURL">
       </div>
       <br>
-      <button type="submit" name="button" class="ink-button blue" (click)="generateAnimal(species.value, common.value, nickname.value, age.value, diet.value, location.value, caretaker.value, sex.value, likes.value, dislikes.value, profileURL.value)"> <span class="fa fa-check"></span> Done Editing</button>
+      <button type="submit" name="button" class="ink-button blue" (click)="finishUpdate()"> <span class="fa fa-check">
+      </span>
+       Done Editing</button>
     </div>
     <div class="all-33">
     </div>
