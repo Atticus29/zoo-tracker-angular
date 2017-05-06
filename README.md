@@ -7,7 +7,7 @@
 ## Description
 DigitalJungle is an open source alternative for tracking animals in your wildlife sanctuary....TODO
 
-## Prerequisites
+## Prerequisites/Installation
 
 You will need the following things properly installed on your computer.
 
@@ -18,23 +18,40 @@ You will need the following things properly installed on your computer.
 
 ## Dependencies
 
-* Bootstrap (should be set up automatically upon build of this webapp, but if not, simply navigate to the project directory in terminal and type, `ember install ember-bootstrap`)
-* Firebase (should be set up automatically upon build of this webapp, but if not, simply navigate to the project directory in terminal and type, `ember install emberfir`)
+* Ink (should be set up automatically upon build of this webapp, but if not, simply navigate to the project directory in terminal and type, `bower install Ink`)
+* *Firebase (should be set up automatically upon build of this webapp, but if not, simply navigate to the project directory in terminal and type, `ember install emberfir`)*
 
 ## Setup
 
-### Installation
+Download this project [here](https://github.com/Atticus29/zoo-tracker-angular/archive/master.zip)
+
+Run `ng serve` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ### Running
 
 ## Specs/User stories
 | Behavior                   | Input Example     | Output Example    |
 | -------------------------- | -----------------:| -----------------:|
-|User should be able to ask a new question|User adds a question and fills out details about the question|Question is recorded by the app|
+|User should be able to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.|User enters animal details|Animal details are recorded|
+|User should be able to view a list of animals that have been logged|User indicated they don't want to filter results|All animals are displayed|
+|User should be able to filter animals by youth, maturity, species identity, and diet|User indicates they want to filter by herbivore|Only herbivores returned|
+|User should be able to edit an animal's name, age, caretakers count, etc.|User edits animal details|Updates are recorded|
 
-## Known Bugs/Future Directions
+## Known Bugs/Future and Bonus functionality
 
-* Currently, the key to firebase is on display for the world to see. Eventually, this should be migrated to a .env file.
+### Future Functionality
+- [x] Extend the functionality of the app by building out the animal model to further enhance the app.
+- [ ] Add custom SASS styling with corresponding Gulp tasks to compile.
+- [ ] Display of the total number of caretakers needed in a day.
+- [x] Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.
+- [x] Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
+- [ ] Add a new master component to average the total age for each species.
+- [x] Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
+- [ ] *deploy on firebase*
+- [ ] *set up database in firebase*
+- [ ] *optimize accessibility*
+- [ ] *DRY up*
+- [ ] *Form validation for new animals*
 
 # License
 
@@ -65,10 +82,10 @@ THE SOFTWARE.
 
 ## Planning
 
-- [ ] Before you begin, take some time to map out a plan - what features do you definitely want to implement
-- [ ] Which can wait until you're approved for a larger project?
-- [ ] Make sure to record your ambitions in your README.
-- [ ] Users (zoo staff), should be able to add newly-admitted animals to the app.
+- [x] Before you begin, take some time to map out a plan - what features do you definitely want to implement
+- [x] Which can wait until you're approved for a larger project?
+- [x] Make sure to record your ambitions in your README.
+- [x] Users (zoo staff), should be able to add newly-admitted animals to the app.
 
 ### Model(s)
   - [x] Model: animal
@@ -85,43 +102,29 @@ THE SOFTWARE.
 
 ### Components
 
-- [ ] **add-animal**: I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.
+- [x] **add-animal**: I want to log a newly-admitted animal by submitting a form with animal species, name, age, diet, zoo location, number of needed caretakers, sex, one like and one dislike.
 - [x] **animals-display**:I want to view a list of animals I have logged.
-- [ ] **edit-animal**:I want to click an animal to edit its name, age or caretakers.
+- [x] **edit-animal**:I want to click an animal to edit its name, age or caretakers.
 
 
 ### Pipes
 
-- [ ] I want options to view all animals
-- [ ] only young animals (less than 2 years of age)
-- [ ] only mature animals (more than 2 years of age).
-- [ ] *filter by species*
-- [ ] *filter by diet*
+- [x] I want options to view all animals
+- [x] only young animals (less than 2 years of age)
+- [x] only mature animals (more than 2 years of age).
+- [x] *filter by species*
+- [x] *filter by diet*
 
 ### General Checklist
-- [ ] Application uses a model to organize data.
-- [ ] Components create display and behavior for your templates.
-- [ ] TypeScript is used throughout application; including variable data types.
+- [x] Application uses a model to organize data.
+- [x] Components create display and behavior for your templates.
+- [x] TypeScript is used throughout application; including variable data types.
 - [ ] Users can successfully create and edit instances of a model.
-- [ ] Models can be filtered using a pipe.
+- [x] Models can be filtered using a pipe.
 - [ ] Project is in a polished, portfolio-quality state. (Clear code presentation, error free, basic styling, complete README, thoughtful UI, etc.)
-- [ ] README contains details on functionality you'd include in the future, given the opportunity.
-- [ ] Required functionality was in place by the Friday deadline.
-- [ ] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
-
-### Bonus
-- [ ] Extend the functionality of the app by building out the animal model to further enhance the app.
-- [ ] Add custom SASS styling with corresponding Gulp tasks to compile.
-- [ ] Display of the total number of caretakers needed in a day.
-- [x] Add a property that records when each animal was admitted. The user could enter a date and time, or the app can generate a timestamp.
-- [x] Expand the application to differentiate between animals' species. Group the animals into those categories. Then include a component to display the total needed caretakers for whichever species the user selects.
-- [ ] Add a new master component to average the total age for each species.
-- [ ] Show animals based on diet type. Then, show all animals who eat meat (carnivores AND omnivores)
-- [ ] *deploy on firebase*
-- [ ] *set up database in firebase*
-- [ ] *optimize accessibility*
-- [ ] *DRY up*
-- [ ] *Form validation for new animals*
+- [x] README contains details on functionality you'd include in the future, given the opportunity.
+- [x] Required functionality was in place by the Friday deadline.
+- [x] Project demonstrates understanding of week's concepts. If prompted, you are able to discuss your code with an instructor using correct terminology.
 
 ---
 

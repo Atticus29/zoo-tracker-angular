@@ -1,0 +1,61 @@
+<script type="text/javascript">
+function scrollBanner(config) {
+
+  scrollPos = $(this).scrollTop();
+
+  config.bannerText.css({
+    'margin-top' : -(scrollPos/3) + "px",
+    'opacity' : 1-(scrollPos/300)
+  });
+
+  config.banner.css({
+    'background-position': 'center ' + (-scrollPos/4) + "px"
+  });
+
+}
+$(document).ready(function(){
+
+  $(window).scroll(function() {
+
+    scrollBanner({
+      banner: $('.banner'),
+      bannerText: $('.banner-text')
+    });
+
+  });
+
+});
+</script>
+<header class="header">
+
+  <div class="container">
+
+    <nav class="nav-main">
+
+      <ul>
+
+        <li class="first"><a href="#">Menu Item</a></li>
+        <li><a href="#">Menu Item</a></li>
+        <li class="last"><a href="#">Menu Item</a></li>
+
+      </ul>
+
+    </nav>
+
+  </div> <!-- end container -->
+
+</header>
+
+<div class="banner">
+
+  <div class="banner-text">
+
+    <h3>Banner Text goes here</h3>
+    <h4>Subline</h4>
+
+  </div> <!-- end banner-text -->
+
+</div> <!-- end banner -->
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+<script src="js/script.js"></script>

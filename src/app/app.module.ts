@@ -8,6 +8,7 @@ import { AnimalsDisplayComponent } from './animals-display/animals-display.compo
 import { EditAnimalComponent } from './edit-animal/edit-animal.component';
 import { AddAnimalComponent } from './add-animal/add-animal.component';
 import { FilterPipe } from './filter.pipe';
+import { BannerDisplayComponent } from './banner-display/banner-display.component';
 
 @NgModule({
   declarations: [
@@ -15,7 +16,8 @@ import { FilterPipe } from './filter.pipe';
     AnimalsDisplayComponent,
     EditAnimalComponent,
     AddAnimalComponent,
-    FilterPipe
+    FilterPipe,
+    BannerDisplayComponent
   ],
   imports: [
     BrowserModule,
