@@ -111,15 +111,15 @@ p {
 Graphic: http://unsplash.com/post/81123587039/download-by-wojtek-witkowski
 */
 .banner {
-  background: url(http://i.imgur.com/1DRTAiD.jpg) no-repeat fixed 50% 0;
-  height: 22em;
+  background: url(https://www.zoochat.com/community/media/lion-exhibit-with-elephants-in-the-background.159169/full?d=1315029187) no-repeat fixed 50% 20%;
+  height: 20em;
   position: relative;
   overflow: hidden;
   width: 100%;
 }
 
 .banner-text {
-  color: #fff;
+  color: #dcdcdc;
   font-size: 1.25em;
   left: 0;
   position: absolute;
@@ -127,4 +127,8 @@ Graphic: http://unsplash.com/post/81123587039/download-by-wojtek-witkowski
   text-align: center;
   text-shadow: 0 0px 2px rgba(0, 0, 0, 0.5);
   width: 100%;
+}
+
+.banner-title-text{
+  color: #dcdcdc;
 }
