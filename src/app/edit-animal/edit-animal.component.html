@@ -1,4 +1,5 @@
-<form class="ink-form edit-form">
+<form>
+  <!-- class="ink-form edit-form" -->
   <div class="column-group gutters">
     <div class="all-33">
     </div>
@@ -21,29 +22,28 @@
       </div>
       <br>
       <label for="diet">Diet</label>
-      <select #diet>
-        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Herbivore">
+      <select [(ngModel)]="editAnimal.diet" name="diet">
+        <option value="Herbivore">
           <p>Herbivore
             <span class="fa fa-leaf"></span>
           </p>
         </option>
-        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Carnivore">
+        <option value="Carnivore">
           <p>Carnivore
             <span class="fa fa-cutlery"></span>
           </p>
         </option>
-        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Omnivore">
+        <option value="Omnivore">
           <p>Omnivore
             <span class="fa fa-cutlery"></span>
           </p>
         </option>
-        <option name="diet" [(ngModel)]="editAnimal.diet" [value]="Insectivore">
+        <option value="Insectivore">
           <p>Insectivore
             <span class="fa fa-bug"></span>
           </p>
         </option>
-        <option name="diet" [(ngModel)]="editAnimal.diet"
-        [value]="Frugivore">
+        <option value="Frugivore">
         <p>Frugivore
           <span class="fa fa-apple"></span>
         </p>
@@ -59,34 +59,20 @@
     <div class="control">
       <input type="number" name="caretaker" id="caretaker" required step="1" [(ngModel)]="editAnimal.caretakerCount">
     </div>
-    <div class="control">
-      <fieldset>
-        <legend>Sex</legend>
-        <div class="control-group">
-          <p class="label">Please select one of these options</p>
-          <ul class="unstyled">
-            <li>
-              <input type="radio" [(ngModel)]="editAnimal.sex" name="sex" [value]="Male">
-              <label for="sex1">Male
-                <span class="fa fa-male"></span>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Female">
-              <label for="sex2">Female
-                <span class="fa fa-female"></span>
-              </label>
-            </li>
-            <li>
-              <input type="radio" name="sex" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable">
-              <label for="sex3">Other/Not Applicable
-                <span class="fa fa-transgender"></span>
-              </label>
-            </li>
-          </ul>
-        </div>
-      </fieldset>
-    </div>
+    <!-- <div class="control"> -->
+      <!-- <fieldset> -->
+        <legend>Sex:</legend>
+          <!-- <input type="radio" [(ngModel)]="selectedTask.priority" [value]="1" name="test">1 (Low Priority)<br>
+          <input type="radio" [(ngModel)]="selectedTask.priority" [value]="2" name="test">2 (Medium Priority)<br>
+          <input type="radio" [(ngModel)]="selectedTask.priority" [value]="3" name="test">3 (High Priority)<br> -->
+          <input type="radio" name="sex-radio" [(ngModel)]="editAnimal.sex" [value]="Male">
+          <label>Male <span class="fa fa-male"></span></label><br>
+          <input type="radio" name="sex-radio" [(ngModel)]="editAnimal.sex" [value]="Female">
+          <label>Female <span class="fa fa-female"></span></label><br>
+          <input type="radio" name="sex-radio" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable">
+          <label>Other/Not Applicable <span class="fa fa-transgender"></span></label><br>
+      <!-- </fieldset> -->
+    <!-- </div> -->
     <label for="likes">Likes</label>
     <div class="control">
       <input type="text" name="likes" id="likes" [(ngModel)]="editAnimal.likes">
