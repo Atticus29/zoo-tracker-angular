@@ -49,18 +49,14 @@
       <div class="control">
         <input type="number" name="caretaker" id="caretaker" required step="1" placeholder="E.g., 2" #caretaker>
       </div>
-      <label for="sex">Sex</label>
-      <ul class="control unstyled">
-        <li>
-          <input type="radio" name="sex" [value]="Male" #sex> Male <span class="fa fa-male"></span>
-        </li>
-        <li>
-          <input type="radio" name="sex" [value]="Female" #sex>Female <span class="fa fa-female"></span>
-        </li>
-        <li>
-          <input type="radio" name="sex" [value]="Not-Applicable" #sex>Not Applicable <span class="fa fa-genderless"></span>
-        </li>
-      </ul>
+      <fieldset>
+        <legend>Sex:</legend>
+        <select #sex>
+          <option value="Male" name="sex">Male</option>
+          <option value="Female" name="sex">Female</option>
+          <option value="Not-Applicable" name="sex">Not-Applicable</option>
+        </select>
+      </fieldset>
       <label for="likes">Likes</label>
       <div class="control">
         <input type="text" name="likes" id="likes" placeholder="E.g., a banana every night" #likes>

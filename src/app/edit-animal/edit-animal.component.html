@@ -1,5 +1,5 @@
-<form>
-  <!-- class="ink-form edit-form" -->
+<form class="ink-form edit-form">
+  <!--  -->
   <div class="column-group gutters">
     <div class="all-33">
     </div>
@@ -60,18 +60,14 @@
       <input type="number" name="caretaker" id="caretaker" required step="1" [(ngModel)]="editAnimal.caretakerCount">
     </div>
     <!-- <div class="control"> -->
-      <!-- <fieldset> -->
+      <fieldset>
         <legend>Sex:</legend>
-          <!-- <input type="radio" [(ngModel)]="selectedTask.priority" [value]="1" name="test">1 (Low Priority)<br>
-          <input type="radio" [(ngModel)]="selectedTask.priority" [value]="2" name="test">2 (Medium Priority)<br>
-          <input type="radio" [(ngModel)]="selectedTask.priority" [value]="3" name="test">3 (High Priority)<br> -->
-          <input type="radio" name="sex-radio" [(ngModel)]="editAnimal.sex" [value]="Male">
-          <label>Male <span class="fa fa-male"></span></label><br>
-          <input type="radio" name="sex-radio" [(ngModel)]="editAnimal.sex" [value]="Female">
-          <label>Female <span class="fa fa-female"></span></label><br>
-          <input type="radio" name="sex-radio" [(ngModel)]="editAnimal.sex" [value]="Not-Applicable">
-          <label>Other/Not Applicable <span class="fa fa-transgender"></span></label><br>
-      <!-- </fieldset> -->
+        <select [(ngModel)]="editAnimal.sex" name="sex">
+          <option value="Male">Male</option>
+          <option value="Female">Female</option>
+          <option value="Not-Applicable">Not-Applicable</option>
+        </select>
+      </fieldset>
     <!-- </div> -->
     <label for="likes">Likes</label>
     <div class="control">
